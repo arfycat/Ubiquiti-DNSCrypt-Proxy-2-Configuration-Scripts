@@ -1,38 +1,14 @@
 {
-        "service": {
-                "dns": {
-                        "forwarding": {
-                                "cache-size": "0",
-                                "except-interface": [
-                                        "eth0"
-                                ],
-                                "options": [
-                                        "server=127.0.0.1#5353",
-										"proxy-dnssec",
-										"no-resolv",
-                                        "stop-dns-rebind",
-                                        "bogus-priv"
-                                ]
-                        }
-                },
-                "upnp2": {
-                        "acl": {
-                                "rule": {
-                                        "10": {
-                                                "action": "deny",
-                                                "description": "deny access to external Port 3074 (Xbox Live)",
-                                                "external-port": "3074",
-                                                "local-port": "0-65535",
-                                                "subnet": "192.168.0.0/24"
-                                        }
-                                }
-                        },
-                        "listen-on": [
-                                "eth1"
-                        ],
-                        "nat-pmp": "enable",
-                        "secure-mode": "enable",
-                        "wan": "eth0"
-                }
-        }
+  "service": {
+    "dns": {
+      "forwarding": {
+        "options": [
+          "server=127.0.0.1#5353",
+          "proxy-dnssec",
+          "no-resolv",
+          "bogus-priv"
+        ]
+      }
+    }
+  }
 }
